@@ -1,6 +1,5 @@
-# Meu Projeto Laravel API
 
-Este é um projeto Laravel que implementa uma API para gerenciamento de usuários e livros.
+Este projeto Laravel implementa uma API para gerenciamento de usuários e livros.
 
 ## Tecnologias
 - Laravel 12.0
