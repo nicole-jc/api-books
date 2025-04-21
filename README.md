@@ -27,13 +27,18 @@ composer install
 
 3. Configure o .env para o seu ambiente
 
-4. Execute as migrações para o seu banco de dados:
+4. Gere a chave do app Laravel:
+```bash
+php artisan key:generate
+```
+
+5. Execute as migrações para o seu banco de dados:
 
 ```bash
 php artisan migrate
 ```
 
-5. Inicie o servidor Laravel:
+6. Inicie o servidor Laravel:
 
 ```bash
 php artisan serve
@@ -41,44 +46,44 @@ php artisan serve
 
 ## API
 
-## Usuários
+Usuários
 
     GET /api/users - Retorna todos os usuários registrados.
 
-
-POST /api/users - Registra um novo usuário.
-
+* POST /api/users - Registra um novo usuário.
+```
 {
   "name": "Nome",
   "email": "email@exemplo.com",
   "password": "senha"
 }
+```
 
-
-PUT /api/users/{id} - Edita os dados de um usuário.
-
+* PUT /api/users/{id} - Edita os dados de um usuário.
+```
 {
   "name": "Novo Nome",
   "email": "novoemail@exemplo.com"
 }
+```
+* DELETE /api/users/{id} - Deleta um usuário.
 
-DELETE /api/users/{id} - Deleta um usuário.
+## 
+Livros
 
-## Livros
+* GET /api/books - Retorna todos os livros registrados.
 
-    GET /api/books - Retorna todos os livros registrados.
-
-    POST /api/books - Registra um novo livro.
-
+* POST /api/books - Registra um novo livro.
+```
 {
   "title": "Título do Livro",
   "author": "Autor do Livro",
   "genre": "Gênero",
   "year": 2021
 }
-
-PUT /api/books/{id} - Edita os dados de um livro.
-
+```
+* PUT /api/books/{id} - Edita os dados de um livro.
+```
 {
   "title": "Novo Título",
   "author": "Novo Autor",
@@ -86,17 +91,9 @@ PUT /api/books/{id} - Edita os dados de um livro.
   "year": 2022,
   "available": 1 (1 = True, 0 = False)
 }
-
-DELETE /api/books/{id} - Deleta um livro.
+```
+* DELETE /api/books/{id} - Deleta um livro.
 
 ## Postman Collection
 
 A collection do Postman para testar a API está disponível na pasta /docs/api-books.postman-collection.json.
-
-Para importar a collection no Postman:
-
-    Abra o Postman.
-
-    Vá até "File" > "Import".
-
-    Selecione o arquivo postman-collection.json.
