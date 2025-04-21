@@ -1,72 +1,103 @@
-# 📚 API de Gerenciamento de Usuários e Livros
+# Meu Projeto Laravel API
 
-[![Laravel](https://img.shields.io/badge/Laravel-12.x-red?style=flat&logo=laravel)](https://laravel.com)
-[![PHP](https://img.shields.io/badge/PHP-8.2-blue?logo=php)](https://www.php.net/)
-[![MySQL](https://img.shields.io/badge/MySQL-5.7-orange?logo=mysql)](https://www.mysql.com/)
-[![Postman](https://img.shields.io/badge/Tested_with-Postman-FF6C37?logo=postman)](https://www.postman.com/)
-[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+Este é um projeto Laravel que implementa uma API para gerenciamento de usuários e livros.
 
----
-
-## 📖 Descrição
-
-API REST feita com **Laravel 12.0**, **PHP 8.2.12**, **MySQL (via XAMPP)**, com frontend em HTML/CSS/JS puro.  
-Permite cadastro, listagem, edição e exclusão de usuários e livros.  
-
----
-
-## 🧰 Tecnologias utilizadas
-
+## Tecnologias
 - Laravel 12.0
-- PHP 8.2.12
-- MySQL (via XAMPP)
-- Postman (com Postman Agent)
-- HTML, CSS, JavaScript
+- PHP 8.12.2
+- MySQL (XAMPP)
+- Postman para testar as rotas
 
----
+## Requisitos
+- Composer
+- PHP 8.12.2
+- Laravel 12.0
+- MySQL
 
-## 🚀 Como rodar o projeto
+## Configuração
+
+1. Repositório GitHub:
+
+https://github.com/nicole-jc/api-books
+
+2. Instale dependências:
 
 ```bash
-# Inicie o servidor Laravel
-php artisan serve
+composer install
+```
 
-# Execute as migrations
+3. Configure o .env para o seu ambiente
+
+4. Execute as migrações para o seu banco de dados:
+
+```bash
 php artisan migrate
 ```
 
----
+5. Inicie o servidor Laravel:
 
-## 📫 Testes com Postman
+```bash
+php artisan serve
+```
 
-    Header necessário:
-    Accept: application/json
+## API
 
----
+## Usuários
 
-## 📮 Rotas da API
-👤 USERS
-| Método | Endpoint         | Ação                  |
-|--------|------------------|-----------------------|
-| GET    | /api/users       | Listar usuários       |
-| POST   | /api/users    | Criar novo usuário    |
-| PUT    | /api/users/{id}  | Editar usuário        |
-| DELETE | /api/users/{id}  | Deletar usuário       |
+    GET /api/users - Retorna todos os usuários registrados.
 
----
 
-## 📚 BOOKS
-| Método | Endpoint         | Ação                  |
-|--------|------------------|-----------------------|
-| GET    | /api/books      | Listar livros      |
-| POST   | /api/books    | Criar novo livro   |
-| PUT    | /api/users/{id}  | Editar usuário        |
-| DELETE | /api/users/{id}  | Deletar usuário       |
+POST /api/users - Registra um novo usuário.
 
---- 
+{
+  "name": "Nome",
+  "email": "email@exemplo.com",
+  "password": "senha"
+}
 
-📁 Arquivos importantes
 
-    postman_collection.json: collection com todas as requisições
+PUT /api/users/{id} - Edita os dados de um usuário.
 
-    .env.example: arquivo de exemplo de configuração ambiente
+{
+  "name": "Novo Nome",
+  "email": "novoemail@exemplo.com"
+}
+
+DELETE /api/users/{id} - Deleta um usuário.
+
+## Livros
+
+    GET /api/books - Retorna todos os livros registrados.
+
+    POST /api/books - Registra um novo livro.
+
+{
+  "title": "Título do Livro",
+  "author": "Autor do Livro",
+  "genre": "Gênero",
+  "year": 2021
+}
+
+PUT /api/books/{id} - Edita os dados de um livro.
+
+{
+  "title": "Novo Título",
+  "author": "Novo Autor",
+  "genre": "Novo Gênero",
+  "year": 2022,
+  "available": 1 (1 = True, 0 = False)
+}
+
+DELETE /api/books/{id} - Deleta um livro.
+
+## Postman Collection
+
+A collection do Postman para testar a API está disponível na pasta /docs/api-books.postman-collection.json.
+
+Para importar a collection no Postman:
+
+    Abra o Postman.
+
+    Vá até "File" > "Import".
+
+    Selecione o arquivo postman-collection.json.
