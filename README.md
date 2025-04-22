@@ -15,7 +15,7 @@ Permite cadastro, listagem, edição e exclusão de usuários e livros.
 
 ## Tecnologias utilizadas
 
-- Laravel 12.0
+- Laravel 12
 - PHP 8.2.12
 - MySQL (XAMPP)
 - Postman
@@ -36,9 +36,8 @@ php artisan key:generate
 ```
 php artisan migrate
 ```
-5. Rode o servidor:
+5. Inicie o servidor:
 ```bash
-# Inicie o servidor
 php artisan serve
 ```
 ## Testes com Postman
