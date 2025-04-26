@@ -16,15 +16,15 @@ class UserController extends Controller
             return response()->json([$users, [
                 [
                     'rel' => 'all',
-                    'href' => url('/api/users'), // link to get all books
+                    'href' => url('/api/users'), // link to get all users
                     'method' => 'GET'
                 ], [
                     'rel' => 'create',
-                    'href' => url('/api/users'), // link to create a new book
+                    'href' => url('/api/users'), // link to create a new users
                     'method' => 'POST'
                 ], [
                     'rel' => 'show',
-                    'href' => url('/api/users/{id}'), // link to show a book
+                    'href' => url('/api/users/{id}'), // link to show a user
                     'method' => 'GET'
                 ], [
                     'rel' => 'update',
@@ -32,7 +32,7 @@ class UserController extends Controller
                     'method' => 'PUT'
                 ], [
                     'rel' => 'delete',
-                    'href' => url('/api/users/{id}'), // link to delete a book
+                    'href' => url('/api/users/{id}'), // link to delete a user
                     'method' => 'DELETE'
                 ]
 
