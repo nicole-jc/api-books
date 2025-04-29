@@ -64,7 +64,7 @@ Recomenda-se instalar o Postman Agent para chamadas localhost.
 | Método | Endpoint         | Ação                  |
 |--------|------------------|-----------------------|
 | GET    | /api/users       | Listar usuários       |
-| POST   | /api/users    | Criar novo usuário    |
+| POST   | /api/users       | Criar novo usuário    |
 | PUT    | /api/users/{id}  | Editar usuário        |
 | DELETE | /api/users/{id}  | Deletar usuário       |
 
@@ -98,10 +98,10 @@ DELETE http://127.0.0.1:8000/api/users/{id}
 ## 🔹 BOOKS
 | Método | Endpoint         | Ação                  |
 |--------|------------------|-----------------------|
-| GET    | /api/books       | Listar livros       |
-| POST   | /api/books    | Criar novo livro   |
-| PUT    | /api/books/{id}  | Editar livro       |
-| DELETE | /api/books/{id}  | Deletar livro      |
+| GET    | /api/books       | Listar livros         |
+| POST   | /api/books       | Criar novo livro      |
+| PUT    | /api/books/{id}  | Editar livro          |
+| DELETE | /api/books/{id}  | Deletar livro         |
 
 🔸 Listar todos os livros - GET
 
